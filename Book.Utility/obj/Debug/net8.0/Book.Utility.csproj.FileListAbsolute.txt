@@ -1,0 +1,14 @@
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\bin\Debug\net8.0\Book.Utility.deps.json
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\bin\Debug\net8.0\Book.Utility.runtimeconfig.json
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\bin\Debug\net8.0\Book.Utility.dll
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\bin\Debug\net8.0\Book.Utility.pdb
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\obj\Debug\net8.0\Book.Utility.csproj.AssemblyReference.cache
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\obj\Debug\net8.0\Book.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\obj\Debug\net8.0\Book.Utility.AssemblyInfoInputs.cache
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\obj\Debug\net8.0\Book.Utility.AssemblyInfo.cs
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\obj\Debug\net8.0\Book.Utility.csproj.CoreCompileInputs.cache
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\obj\Debug\net8.0\Book.Utility.dll
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\obj\Debug\net8.0\refint\Book.Utility.dll
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\obj\Debug\net8.0\Book.Utility.pdb
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\obj\Debug\net8.0\Book.Utility.genruntimeconfig.cache
+C:\Users\SEETARAM\source\repos\Book\Book.Utility\obj\Debug\net8.0\ref\Book.Utility.dll
