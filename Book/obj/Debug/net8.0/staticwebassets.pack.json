@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\Book.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\SEETARAM\\source\\repos\\Book\\Book\\wwwroot\\css\\BootswatchTheme.css",
+      "PackagePath": "staticwebassets\\css\\BootswatchTheme.css"
+    },
+    {
       "Id": "C:\\Users\\SEETARAM\\source\\repos\\Book\\Book\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\SEETARAM\\source\\repos\\Book\\Book\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\SEETARAM\\source\\repos\\Book\\Book\\wwwroot\\images\\products\\dead.png",
+      "PackagePath": "staticwebassets\\images\\products\\dead.png"
     },
     {
       "Id": "C:\\Users\\SEETARAM\\source\\repos\\Book\\Book\\wwwroot\\js\\site.js",

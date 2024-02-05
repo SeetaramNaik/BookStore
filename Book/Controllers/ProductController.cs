@@ -56,10 +56,12 @@ namespace WebApplication.Controllers
             //var category = _db.Categories.Find(id);
             else
             {
+                productVM.Product = _unitOfWork.Product.GetFirstOrDefualt(u => u.Id == id);
+                return View(productVM);
                 //update
             }
 
-            return View(productVM);
+            
         }
 
         //POST
@@ -68,13 +70,22 @@ namespace WebApplication.Controllers
         public IActionResult Upsert(ProductVM obj)
         {
 
-                if (ModelState.IsValid)
+            if (ModelState.IsValid)
+            {
+                if(obj.Product.Id == 0)
                 {
                     _unitOfWork.Product.Add(obj.Product);
                     _unitOfWork.Save();
                     return RedirectToAction("Index");
                 }
-                return View(obj);
+                else
+                {
+                    _unitOfWork.Product.Update(obj.Product);
+                    _unitOfWork.Save();
+                    return RedirectToAction("Index");
+                }
+            }
+            return View(obj);
             
             
 
@@ -88,26 +99,39 @@ namespace WebApplication.Controllers
                 return NotFound();
             }
             //var category = _db.Categories.Find(id);
-            var product = _unitOfWork.Product.GetFirstOrDefualt(c=>c.Id == id);
+            var product = _unitOfWork.Product.GetFirstOrDefualt(c => c.Id == id);
             if (product == null)
             {
                 return NotFound();
             }
-            return View(product);
+            var categories = _unitOfWork.Category.GetAll();
+            var covertypes = _unitOfWork.CoverType.GetAll();
+            var productViewModel = new ProductVM
+            {
+                Product = product,
+                CategoryList = categories.Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name}),
+                CoverTypeList = covertypes.Select(ct => new SelectListItem { Value = ct.Id.ToString(), Text = ct.Name})
+            };
+            return View(productViewModel);
         }
 
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Delete(Product obj)
+        public IActionResult Delete(int id)
         {
+            var product = _unitOfWork.Product.GetFirstOrDefualt(u => u.Id == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
             if (ModelState.IsValid)
             {
-                _unitOfWork.Product.Remove(obj);
+                _unitOfWork.Product.Remove(product);
                 _unitOfWork.Save();
                 return RedirectToAction("Index");
             }
-            return View(obj);
+            return View(product);
 
         }
 

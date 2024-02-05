@@ -29,6 +29,7 @@ namespace Application.DataAccess.Repository
             return query.ToList();
         }
 
+
         public T GetFirstOrDefualt(Expression<Func<T, bool>> filter)
         {
             IQueryable<T> query = DBSet;
