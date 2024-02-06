@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Application.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 
 namespace Application.DataAccess;
 
 
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
