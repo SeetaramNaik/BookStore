@@ -14,6 +14,17 @@ namespace WebApplication.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+
+        //GET
+        /// <summary>
+        /// To get all the covertype list
+        /// </summary>
+        /// <returns> This endpoint returns a view of the Cover Types.</returns>
+        [HttpGet]
+        [Route("/CoverType")]
+        [ProducesResponseType(typeof(CoverType), 200)]
+        [ProducesResponseType(typeof(string), 404)]
+        [ProducesResponseType(typeof(string), 500)]
         public IActionResult Index()
         {
             IEnumerable<CoverType> coverTypeList = _unitOfWork.CoverType.GetAll();
@@ -27,7 +38,16 @@ namespace WebApplication.Controllers
         }
 
         //POST
+        /// <summary>
+        /// To create a new cover type
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns> This endpoint returns a view of the Cover Type list.</returns>
         [HttpPost]
+        [Route("/CoverType/Create")]
+        [ProducesResponseType(typeof(CoverType), 200)]
+        [ProducesResponseType(typeof(string), 404)]
+        [ProducesResponseType(typeof(string), 500)]
         [ValidateAntiForgeryToken]
         public IActionResult Create(CoverType obj)
         {
@@ -43,6 +63,18 @@ namespace WebApplication.Controllers
 
 
         //GET
+
+        /// <summary>
+        /// To get a cover type to be updated
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns> This endpoint returns a view of the updated Cover Type list.</returns>
+        [HttpGet]
+        [Route("/CoverType/Edit/{id}")]
+        [ProducesResponseType(typeof(CoverType), 200)]
+        [ProducesResponseType(typeof(string), 404)]
+        [ProducesResponseType(typeof(string), 500)]
+        //[ValidateAntiForgeryToken]
         public IActionResult Edit(int? id)
         {
             if(id == null || id == 0)
@@ -59,7 +91,16 @@ namespace WebApplication.Controllers
         }
 
         //POST
+        /// <summary>
+        /// To update the Cover Type
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns> This endpoint returns a view of the updated Cover Type list.</returns>
         [HttpPost]
+        [Route("/CoverType/Create/{id}")]
+        [ProducesResponseType(typeof(CoverType), 200)]
+        [ProducesResponseType(typeof(string), 404)]
+        [ProducesResponseType(typeof(string), 500)]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(CoverType obj)
         {
@@ -90,7 +131,16 @@ namespace WebApplication.Controllers
         }
 
         //POST
+        /// <summary>
+        /// To delete the Cover Type
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns> This endpoint returns a view of the updated Cover Type list.</returns>
         [HttpPost]
+        [Route("/CoverType/Delete/{id}")]
+        [ProducesResponseType(typeof(CoverType), 200)]
+        [ProducesResponseType(typeof(string), 404)]
+        [ProducesResponseType(typeof(string), 500)]
         [ValidateAntiForgeryToken]
         public IActionResult Delete(CoverType obj)
         {

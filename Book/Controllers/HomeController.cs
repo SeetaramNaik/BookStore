@@ -20,13 +20,38 @@ namespace WebApplication.Controllers
             _unitofWork = unitofWork;
         }
 
+
+        /// <summary>
+        /// Retrieves a list of products and renders then in a view
+        /// </summary>
+        /// <returns>The view containing the list of products.</returns>
+        [HttpGet]
+        [Route("")]
+        [ProducesResponseType(typeof(IEnumerable<Product>), 200)]
+        [ProducesResponseType(typeof(string), 404)]
+        [ProducesResponseType(typeof(string), 500)]
         public IActionResult Index()
         {
             IEnumerable<Product> productList = _unitofWork.Product.GetAll();
 
+            if(productList is null)
+            {
+                return NotFound();
+            }
+
             return View(productList);
         }
 
+        /// <summary>
+        /// Retrieves the product details to add into shopping cart
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>The view of details products.</returns>
+        [HttpGet]
+        [Route("/Home/Details/{id}")]
+        [ProducesResponseType(typeof(ShoppingCart),200)]
+        [ProducesResponseType(typeof(string),404)]
+        [ProducesResponseType(typeof(string),500)]
         public IActionResult Details(int id)
         {
             ShoppingCart cartObj = new()
