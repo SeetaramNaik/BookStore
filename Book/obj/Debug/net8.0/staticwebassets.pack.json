@@ -17,6 +17,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\SEETARAM\\source\\repos\\Book\\Book\\wwwroot\\images\\products\\LifeOfPi.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\LifeOfPi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SEETARAM\\source\\repos\\Book\\Book\\wwwroot\\images\\products\\NormalPeople.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\NormalPeople.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SEETARAM\\source\\repos\\Book\\Book\\wwwroot\\images\\products\\RichDad&PoorDad.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\RichDad&PoorDad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SEETARAM\\source\\repos\\Book\\Book\\wwwroot\\images\\products\\Think&GrowRich.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\Think&GrowRich.jpg"
+    },
+    {
       "Id": "C:\\Users\\SEETARAM\\source\\repos\\Book\\Book\\wwwroot\\images\\products\\dead.png",
       "PackagePath": "staticwebassets\\images\\products\\dead.png"
     },

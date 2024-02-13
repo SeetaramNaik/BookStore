@@ -1,0 +1,47 @@
+﻿@model Book.Models.Company
+
+<form method="post">
+
+    <input asp-for="@Model.Id" hidden/>
+    <div class="border mt-3 p-3 row">
+        <div class="pt-3 mb-3">
+            <h2>Delete Company</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control w-50" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="StreetAddress"></label>
+            <input asp-for="StreetAddress" rows="3" class="form-control w-50" />
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="City"></label>
+            <input asp-for="City" class="form-control w-50" />
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="State"></label>
+            <input asp-for="State" class="form-control w-50" />
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="PostalCode"></label>
+            <input asp-for="PostalCode" class="form-control w-50" />
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" class="form-control w-50" />
+        </div>
+        
+        <div class="row" style="margin-top:30px;">
+           
+            <button type="submit" class="btn btn-primary col-3" style="width:100px;margin-right:10px;">Delete</button>
+            
+           
+            <a asp-controller="Company" asp-action="Index" class="btn btn-warning col-2">Back to list</a>
+        </div>
+        
+    </div>
+</form>
+
+

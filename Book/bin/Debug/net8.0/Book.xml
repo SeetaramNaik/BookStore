@@ -806,6 +806,60 @@
             <param name="obj"></param>
             <returns> This endpoint returns a view of the updated Categories.</returns>
         </member>
+        <member name="M:WebApplication.Controllers.CompanyController.Index">
+            <summary>
+            Retrieves a list of companies and renders then in a view
+            </summary>
+            <returns>The view containing the list of companies.</returns>
+        </member>
+        <member name="M:WebApplication.Controllers.CompanyController.Upsert(Book.Models.Company)">
+            <summary>
+            Used to create and update the company
+            </summary>
+            <param name="company"></param>
+            <returns>The view containing the company details.</returns>
+        </member>
+        <member name="M:WebApplication.Controllers.CompanyController.Delete(System.Int32)">
+            <summary>
+            Used to delete the company
+            </summary>
+            <param name="id"></param>
+            <returns>The view of remaining companies.</returns>
+        </member>
+        <member name="M:WebApplication.Controllers.CoverTypeController.Index">
+            <summary>
+            To get all the covertype list
+            </summary>
+            <returns> This endpoint returns a view of the Cover Types.</returns>
+        </member>
+        <member name="M:WebApplication.Controllers.CoverTypeController.Create(Application.Models.CoverType)">
+            <summary>
+            To create a new cover type
+            </summary>
+            <param name="obj"></param>
+            <returns> This endpoint returns a view of the Cover Type list.</returns>
+        </member>
+        <member name="M:WebApplication.Controllers.CoverTypeController.Edit(System.Nullable{System.Int32})">
+            <summary>
+            To get a cover type to be updated
+            </summary>
+            <param name="id"></param>
+            <returns> This endpoint returns a view of the updated Cover Type list.</returns>
+        </member>
+        <member name="M:WebApplication.Controllers.CoverTypeController.Edit(Application.Models.CoverType)">
+            <summary>
+            To update the Cover Type
+            </summary>
+            <param name="obj"></param>
+            <returns> This endpoint returns a view of the updated Cover Type list.</returns>
+        </member>
+        <member name="M:WebApplication.Controllers.CoverTypeController.Delete(Application.Models.CoverType)">
+            <summary>
+            To delete the Cover Type
+            </summary>
+            <param name="obj"></param>
+            <returns> This endpoint returns a view of the updated Cover Type list.</returns>
+        </member>
         <member name="M:WebApplication.Controllers.HomeController.Index">
             <summary>
             Retrieves a list of products and renders then in a view
@@ -818,6 +872,26 @@
             </summary>
             <param name="id"></param>
             <returns>The view of details products.</returns>
+        </member>
+        <member name="M:WebApplication.Controllers.ProductController.Index">
+            <summary>
+            Retrieves a list of products and renders then in a view
+            </summary>
+            <returns>The view containing the list of products.</returns>
+        </member>
+        <member name="M:WebApplication.Controllers.ProductController.Upsert(Application.Models.ViewModel.ProductVM)">
+            <summary>
+            Used to create and update the product
+            </summary>
+            <param name="obj"></param>
+            <returns>The view containing the product details.</returns>
+        </member>
+        <member name="M:WebApplication.Controllers.ProductController.Delete(System.Int32)">
+            <summary>
+            Used to delete the product
+            </summary>
+            <param name="id"></param>
+            <returns>The view of remaining products.</returns>
         </member>
     </members>
 </doc>

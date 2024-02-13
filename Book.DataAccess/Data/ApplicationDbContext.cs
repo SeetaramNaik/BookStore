@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Application.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
+using Book.Models;
 
 
 namespace Application.DataAccess;
@@ -14,17 +16,9 @@ public class ApplicationDbContext : IdentityDbContext
         
     }
 
-    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //{
-    //    if (!optionsBuilder.IsConfigured)
-    //    {
-    //        optionsBuilder.UseSqlServer(
-    //             builder.Configuration.GetConnectionString("DefaultConnection"),
-    //            b => b.MigrationsAssembly("Application.DataAccess"));
-    //    }
-    //}
-
     public DbSet<Category> Categories { get; set; }
     public DbSet<CoverType> CoverTypes { get; set; }
     public DbSet<Product> Products { get; set; }
+    public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+    public DbSet<Company> Companies { get; set; }
 }

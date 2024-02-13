@@ -19,13 +19,23 @@ namespace WebApplication.Controllers
             _webHostEnvironment = webHostEnvironment;
             _logger = logger;
         }
+
+        /// <summary>
+        /// Retrieves a list of products and renders then in a view
+        /// </summary>
+        /// <returns>The view containing the list of products.</returns>
+        [HttpGet]
+        [Route("/Product")]
+        [ProducesResponseType(typeof(Product), 200)]
+        [ProducesResponseType(typeof(string), 404)]
+        [ProducesResponseType(typeof(string), 500)]
         public IActionResult Index()
         {
             IEnumerable<Product> productList = _unitOfWork.Product.GetAll();
             return View(productList);
         }
 
-
+        
         //GET
         public IActionResult Upsert(int? id)
         {
@@ -48,24 +58,28 @@ namespace WebApplication.Controllers
 
             if (id == null || id == 0)
             {
-                //create
-                //ViewBag.CategoryList = CategoryList;
-                //ViewData["CoverTypeList"] = CoverTypeList;
                 return View(productVM);
             }
-            //var category = _db.Categories.Find(id);
             else
             {
                 productVM.Product = _unitOfWork.Product.GetFirstOrDefualt(u => u.Id == id);
                 return View(productVM);
-                //update
             }
 
             
         }
 
+        /// <summary>
+        /// Used to create and update the product
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns>The view containing the product details.</returns>
         //POST
         [HttpPost]
+        [Route("/Product/Upsert")]
+        [ProducesResponseType(typeof(Product), 200)]
+        [ProducesResponseType(typeof(string), 404)]
+        [ProducesResponseType(typeof(string), 500)]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(ProductVM obj)
         {
@@ -115,8 +129,17 @@ namespace WebApplication.Controllers
             return View(productViewModel);
         }
 
+        /// <summary>
+        /// Used to delete the product
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>The view of remaining products.</returns>
         //POST
         [HttpPost]
+        [Route("/Product/Delete/{id}")]
+        [ProducesResponseType(typeof(Product), 200)]
+        [ProducesResponseType(typeof(string), 404)]
+        [ProducesResponseType(typeof(string), 500)]
         [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
