@@ -21,7 +21,8 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.0",
-          "Swashbuckle.AspNetCore": "6.5.0"
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "Book.Utility": "1.0.0.0"
         },
         "runtime": {
           "Book.dll": {}
@@ -3390,6 +3391,14 @@
         "runtime": {
           "Book.Models.dll": {}
         }
+      },
+      "Book.Utility/1.0.0.0": {
+        "runtime": {
+          "Book.Utility.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -5618,6 +5627,11 @@
     },
     "Book.Models/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Book.Utility/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }
